@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 find_package(MbedTLS CONFIG REQUIRED PATHS "${CMAKE_SOURCE_DIR}/../mbedtls/build/cmake/" NO_DEFAULT_PATH)
-find_package(MbedTLS CONFIG REQUIRED)
+#find_package(MbedTLS CONFIG REQUIRED)
 find_package(jsoncpp CONFIG REQUIRED)
 find_package(curl CONFIG REQUIRED)
 find_package(libwebsockets CONFIG REQUIRED)
