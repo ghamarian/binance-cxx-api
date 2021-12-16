@@ -103,7 +103,7 @@ string binance::hmac_sha256( const char *key, const char *data)
 string binance::sha256( const char *data )
 {
 	unsigned char digest[32];
-	mbedtls_sha256_ret( reinterpret_cast<const unsigned char*>(data),
+	mbedtls_sha256( reinterpret_cast<const unsigned char*>(data),
 		strlen(data), digest, 0 );
 	return b2a_hex( (char *)digest, 32 );	
 }
