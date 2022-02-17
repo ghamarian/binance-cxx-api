@@ -22,7 +22,7 @@ set(LIBWEBSOCKETS_LIBRARIES websockets)
 file(GLOB_RECURSE LIBRARY_SRC "src/*.cpp" "include/*.h")
 
 add_library(${PROJECT_NAME} SHARED ${LIBRARY_SRC})
-target_link_libraries(${PROJECT_NAME} PUBLIC ${LIBWEBSOCKETS_LIBRARIES} ${JSONCPP_LIBRARIES} ${CURL_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} PUBLIC ${LIBWEBSOCKETS_LIBRARIES} ${JSONCPP_LIBRARIES} CURL::libcurl)
 target_link_libraries(${PROJECT_NAME} PUBLIC MbedTLS::mbedtls MbedTLS::mbedcrypto MbedTLS::mbedx509)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
